@@ -28,10 +28,6 @@ export default function OnboardingForm() {
     setForm((prev) => ({ ...prev, [field]: value }));
   };
 
-  const handleNext = () => {
-    // Normally you would validate and save the data before navigating.
-    navigate('/dashboard');
-  };
 
   return (
     <form
@@ -111,7 +107,7 @@ export default function OnboardingForm() {
         required
       />
       <div className="text-right">
-        <Button onClick={handleNext}>Next →</Button>
+        <Button onClick={() => navigate('/dashboard')}>Next →</Button>
       </div>
     </form>
   );

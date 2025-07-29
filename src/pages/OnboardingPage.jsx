@@ -10,9 +10,7 @@ import OnboardingForm from '../components/OnboardingForm.jsx';
 export default function OnboardingPage() {
   return (
     <DashboardLayout>
-      <div className="col-span-full flex justify-center items-start md:items-center w-full h-full">
-        <OnboardingForm />
-      </div>
+      <OnboardingForm />
     </DashboardLayout>
   );
 }
