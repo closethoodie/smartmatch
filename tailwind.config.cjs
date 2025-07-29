@@ -24,8 +24,12 @@ module.exports = {
         neutralDark: '#666666',
       },
       fontFamily: {
+        // Primary font pairings.  Provide both camelCase and kebab-case
+        // aliases so classes like `font-heading` still work.
         fontHeading: ['Poppins', 'sans-serif'],
         fontBody: ['Roboto', 'sans-serif'],
+        heading: ['Poppins', 'sans-serif'],
+        body: ['Roboto', 'sans-serif'],
       },
     },
   },
