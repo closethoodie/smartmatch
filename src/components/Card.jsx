@@ -1,20 +1,15 @@
 import React from 'react';
 
 /**
- * Card component stub.
- *
- * A generic container used throughout the app for match previews and summaries.
- * Accepts optional className, children and onClick props. Replace the
- * placeholder content with your actual implementation.
+ * Upgraded Card component:
+ * - Soft drop shadow, border, and gradient background.
+ * - Rounded corners and smooth transition on hover.
+ * - Uses semantic colors from Tailwind config.
  */
-export default function Card({ className = '', children = 'Card', onClick }) {
+export default function Card({ children, className = '' }) {
   return (
     <div
-      className={
-        `bg-white p-6 rounded-2xl shadow-sm hover:shadow-md transition-shadow ` +
-        className
-      }
-      onClick={onClick}
+      className={`bg-gradient-to-br from-neutralLight via-white to-neutralLight border border-neutralDark/10 shadow-lg rounded-xl p-6 transition-all duration-300 hover:shadow-2xl hover:border-primary/30 ${className}`}
     >
       {children}
     </div>
