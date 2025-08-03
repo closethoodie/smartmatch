@@ -1,22 +1,17 @@
 import React from 'react';
 
 /**
- * Button stub component.
- *
- * Represents primary, secondary and tertiary buttons. Accepts an onClick
- * handler along with className and children. This stub simply displays
- * the component name and forwards events to onClick.
+ * Upgraded Button component:
+ * - Bold primary color with gradient and deeper shadow.
+ * - Smooth scale and color transition on hover/focus.
+ * - Rounded pill shape and large, readable font.
  */
-export default function Button({ className = '', children = 'Button', onClick }) {
+export default function Button({ children, onClick, className = '', ...props }) {
   return (
     <button
-      type="button"
+      className={`bg-gradient-to-r from-primary via-secondary to-accent text-white font-heading px-6 py-2 rounded-full shadow-md transition-transform transition-shadow duration-200 hover:scale-105 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 active:scale-95 ${className}`}
       onClick={onClick}
-      className={
-        `px-4 py-2 rounded text-white font-heading bg-primary ` +
-        `hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-primary/50 ` +
-        className
-      }
+      {...props}
     >
       {children}
     </button>
